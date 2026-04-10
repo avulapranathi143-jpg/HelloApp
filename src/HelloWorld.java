@@ -2,17 +2,8 @@ public class HelloWorld {
     public static void main(String[] args) {
 
         if (args.length > 0) {
-            String result = "";
-
-            for (String name : args) {
-                result += name + " ";
-            }
-
-            // Remove last extra space
-            result = result.substring(0, result.length() - 1);
-
-            System.out.println("Hello " + result);
-
+            String names = String.join(" ", args);
+            System.out.println("Hello " + names);
         } else {
             System.out.println("Hello, World!");
         }
